@@ -1,8 +1,9 @@
+import RootLayout from '@/components/layouts/RootLayout';
 import React from 'react';
 
-const index = () => {
+const Home = () => {
   return (
-    <div>
+    <div className='min-h-screen'>
       <h1 className="text-4xl">
         Hello from Atlas builder
       </h1>
@@ -10,4 +11,12 @@ const index = () => {
   );
 };
 
-export default index;
+export default Home;
+
+Home.getLayout = function layout(page) {
+  return (
+    <RootLayout>
+      {page}
+    </RootLayout>
+  )
+}

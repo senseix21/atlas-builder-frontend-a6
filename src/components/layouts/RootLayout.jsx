@@ -1,56 +1,55 @@
 import React from 'react';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { Breadcrumb, Button, Layout, Menu, theme } from 'antd';
 const { Header, Content, Footer } = Layout;
+import {
+    DesktopOutlined,
+    FileOutlined,
+    PieChartOutlined,
+    TeamOutlined,
+    UserOutlined,
+} from '@ant-design/icons';
 
-const RootLayout = () => {
+function getItem(label, key, icon, children) {
+    return {
+        key,
+        icon,
+        children,
+        label,
+    };
+}
+const items = [
+    getItem('Option 1', '1', <PieChartOutlined />),
+    getItem('Option 2', '2', <DesktopOutlined />),
+    getItem('User', 'sub1', <UserOutlined />, [
+        getItem('Tom', '3'),
+        getItem('Bill', '4'),
+        getItem('Alex', '5'),
+    ]),
+    getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
+    getItem('Files', '9', <FileOutlined />),
+];
+
+const RootLayout = ({ children }) => {
     const {
         token: { colorBgContainer },
     } = theme.useToken();
     return (
         <Layout className="layout">
+
             <Header
                 style={{
-                    display: 'flex',
-                    alignItems: 'center',
+                    // display: 'flex',
+                    // alignItems: 'center',
                 }}
             >
-                <div className="demo-logo" />
-                <Menu
-                    theme="dark"
-                    mode="horizontal"
-                    defaultSelectedKeys={['2']}
-                    items={new Array(15).fill(null).map((_, index) => {
-                        const key = index + 1;
-                        return {
-                            key,
-                            label: `nav ${key}`,
-                        };
-                    })}
-                />
+                <div className="demo-logo-vertical" />
+                <Menu theme="dark" defaultSelectedKeys={['1']} mode="horizontal" items={items} />
             </Header>
-            <Content
-                style={{
-                    padding: '0 50px',
-                }}
-            >
-                <Breadcrumb
-                    style={{
-                        margin: '16px 0',
-                    }}
-                >
-                    <Breadcrumb.Item>Home</Breadcrumb.Item>
-                    <Breadcrumb.Item>List</Breadcrumb.Item>
-                    <Breadcrumb.Item>App</Breadcrumb.Item>
-                </Breadcrumb>
-                <div
-                    className="site-layout-content"
-                    style={{
-                        background: colorBgContainer,
-                    }}
-                >
-                    Content
-                </div>
+
+            <Content style={{ padding: '0 50px', }}>
+                {children}
             </Content>
+
             <Footer
                 style={{
                     textAlign: 'center',
