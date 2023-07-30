@@ -12,7 +12,7 @@ export const authOptions = {
 
     ],
     pages: {
-        signIn: 'https://atlasbuilder.netlify.app/login',
+        signIn: '/login',
     }
 }
 
