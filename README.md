@@ -1,8 +1,10 @@
-# Atlas PC Builder
-#Live site URL: 
+# Live site URL: 
 https://atlasbuilder.netlify.app/
-#Server URL:
+
+# Server URL:
 https://atlas-builder-backend-a6.vercel.app/products
+
+# Atlas PC Builder
 
 Atlas PC Builder is a web application that allows users to build their dream PC by selecting various components from different categories. Users can choose from a wide range of products, including CPUs, motherboards, RAM, power supply units, storage devices, monitors, and more.
 
