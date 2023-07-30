@@ -52,7 +52,7 @@ const FeaturedCategory = () => {
             <div className='grid lg:grid-cols-3 gap-5 border-r-2'>
                 {
                     categories.map(category =>
-                        <Link href={category.link} className='flex items-center bg-black text-white rounded-lg '>
+                        <Link key={category.title} href={category.link} className='flex items-center bg-black text-white rounded-lg '>
                             <img src={category.img} alt="" width={80} />
                             <p>{category.title}</p>
                         </Link>)

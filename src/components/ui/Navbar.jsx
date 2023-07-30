@@ -57,7 +57,7 @@ const Navbar = () => {
                 </Menu.Item>
                 <Menu.Item key="categories" className="text-white bg-black">
                     <Dropdown overlay={menu} trigger={['click']}>
-                        <Button color='black'>
+                        <Button className='bg-black text-white'>
                             Categories <DownOutlined />
                         </Button>
                     </Dropdown>
@@ -67,13 +67,13 @@ const Navbar = () => {
                         <Button color='black' type='primary' danger>PC Builder</Button>
                     </Link>
                 </Menu.Item>
-                {data?.user || user?.email ? (
+                {data?.user ? (
                     <Menu.Item key="user" className="text-white">
-                        <p>{data?.user?.name || user?.email}</p>
+                        <p>{data?.user?.name}</p>
                     </Menu.Item>
                 ) : null}
                 <Menu.Item key="auth" className="text-white">
-                    {data?.user || user?.email ? (
+                    {data?.user ? (
                         <Button onClick={() => signOut()} type="primary" danger>
                             Logout
                         </Button>
@@ -124,13 +124,13 @@ const Navbar = () => {
                             <Button>PC Builder</Button>
                         </Link>
                     </Menu.Item>
-                    {data?.user || user?.email ? (
+                    {data?.user ? (
                         <Menu.Item key="user" className="text-white">
-                            <p>{data?.user?.name || user?.email}</p>
+                            <p>{data?.user?.name}</p>
                         </Menu.Item>
                     ) : null}
                     <Menu.Item key="auth" className="text-white">
-                        {data?.user || user?.email ? (
+                        {data?.user ? (
                             <Button onClick={() => signOut()} type="primary" danger>
                                 Logout
                             </Button>
