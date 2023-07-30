@@ -47,7 +47,7 @@ const PcBuilder = () => {
 
                         </div>
                         <div className='flex items-center'>
-                            <h4>Price: {cpu?.price}</h4>
+                            <h4>Price: ${cpu?.price}</h4>
                             <Button ><Link href={'/pc-builder/processor'}>Choose</Link></Button>
                         </div>
                     </div>
