@@ -3,4 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  nextConfig,
+  // next.config.js
+  // Other configurations...
+  auth: {
+    // other settings...
+    privateRoutes: ['/shop/:id', '/pc-builder'],
+  }
+
+}
