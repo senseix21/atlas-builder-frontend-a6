@@ -4,7 +4,7 @@ import RootLayout from '@/components/layouts/RootLayout';
 
 const Shop = ({ data }) => {
     return (
-        <div className='grid grid-cols-4 gap-5'>
+        <div className='grid lg:grid-cols-4 gap-5'>
             {
                 data.map(product =>
                     <Products key={product._id} data={product} />

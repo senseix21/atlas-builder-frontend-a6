@@ -30,7 +30,7 @@ export async function getStaticProps() {
     const data = await res.json();
 
     // Filter the data with "Motherboard" category
-    const Products = data.filter((product) => product.category === 'Power Supply Unit');
+    const Products = data.filter((product) => product.category === 'PowerSupplyUnit');
 
     return {
         props: {

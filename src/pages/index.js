@@ -2,6 +2,7 @@ import RootLayout from '@/components/layouts/RootLayout';
 import FeaturedCategory from '@/components/ui/FeaturedCategory';
 import FeaturedProducts from '@/components/ui/FeaturedProducts';
 import Hero from '@/components/ui/Hero';
+import WhyUs from '@/components/ui/WhyUs';
 import React from 'react';
 
 const Home = ({ data }) => {
@@ -15,7 +16,7 @@ const Home = ({ data }) => {
         <h2 className='text-4xl text-bold text-left my-3'>
           Our Featured <span className='text-orange-600'>Computer Products</span>
         </h2>
-        <div className='grid grid-cols-3 gap-3'>
+        <div className='grid lg:grid-cols-3 gap-3'>
           {
             data?.map((item) =>
               <FeaturedProducts key={item._id} data={item}></FeaturedProducts>
@@ -25,6 +26,8 @@ const Home = ({ data }) => {
       </div>
 
       <FeaturedCategory />
+      <WhyUs />
+
 
     </div>
   );

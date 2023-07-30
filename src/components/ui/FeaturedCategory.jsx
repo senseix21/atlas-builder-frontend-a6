@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const FeaturedCategory = () => {
@@ -5,33 +6,41 @@ const FeaturedCategory = () => {
     const categories = [
         {
             title: 'Processor/CPU',
-            img: 'https://i.ibb.co/LPBFJt0/cpu.png'
+            img: 'https://i.ibb.co/LPBFJt0/cpu.png',
+            link: '/shop/processor'
         },
         {
             title: 'Motherboard',
-            img: 'https://i.ibb.co/RQ6ppPV/motherboard.png'
+            img: 'https://i.ibb.co/RQ6ppPV/motherboard.png',
+            link: '/shop/motherboard'
+
         },
         {
             title: 'RAM',
-            img: 'https://i.ibb.co/5vZD82g/ram.png'
+            img: 'https://i.ibb.co/5vZD82g/ram.png',
+            link: '/shop/ram'
+
         },
         {
             title: 'Monitor',
-            img: 'https://i.ibb.co/z4r4csK/monitor.png'
+            img: 'https://i.ibb.co/z4r4csK/monitor.png',
+            link: '/shop/monitor'
+
         },
         {
             title: 'Power Supply Unit',
-            img: 'https://i.ibb.co/DW49SxF/power.png'
+            img: 'https://i.ibb.co/DW49SxF/power.png',
+            link: '/shop/power'
+
         },
 
         {
             title: 'Storage Device',
-            img: 'https://i.ibb.co/YBJk2pn/ssd.png'
+            img: 'https://i.ibb.co/YBJk2pn/ssd.png',
+            link: '/shop/storage'
+
         },
-        {
-            title: 'Others',
-            img: 'https://i.ibb.co/2gGh5Dx/others.png'
-        },
+
     ];
 
 
@@ -40,13 +49,13 @@ const FeaturedCategory = () => {
             <h2 className='text-4xl text-bold text-left my-3'>
                 Our Featured <span className='text-orange-600'>Categories</span>
             </h2>
-            <div className='grid grid-cols-3 gap-5 border-r-2'>
+            <div className='grid lg:grid-cols-3 gap-5 border-r-2'>
                 {
                     categories.map(category =>
-                        <div className='flex items-center bg-orange-600 text-white '>
-                            <img src={category.img} alt="" width={60} />
+                        <Link href={category.link} className='flex items-center bg-black text-white rounded-lg '>
+                            <img src={category.img} alt="" width={80} />
                             <p>{category.title}</p>
-                        </div>)
+                        </Link>)
                 }
             </div>
         </>

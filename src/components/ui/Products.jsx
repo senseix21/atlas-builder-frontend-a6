@@ -18,7 +18,7 @@ const Products = ({ data }) => {
                         <img className='p-5'
                             alt={data.name}
                             src={data.imageUrl}
-                            width={200}
+                            height={300}
                         />
                     }
 

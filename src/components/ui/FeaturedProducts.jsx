@@ -6,7 +6,7 @@ const { Meta } = Card;
 const Featureddatas = ({ data }) => {
     console.log(data, 'Featured');
     return (
-        <Link href={`/products/${data._id}`}>
+        <Link href={`/shop/${data._id}`}>
             <Card
                 style={{
                     width: 300,
@@ -15,7 +15,8 @@ const Featureddatas = ({ data }) => {
                     <img className='p-5'
                         alt={data.name}
                         src={data.imageUrl}
-                        width={200}
+                        // width={300}
+                        height={300}
                     />
                 }
 

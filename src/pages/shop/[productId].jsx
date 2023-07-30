@@ -58,16 +58,15 @@ const ProductDetails = ({ data }) => {
     };
 
     return (
-        <div className='lg:flex justify-around p-10'>
+        <div className='lg:flex justify-around lg:p-10'>
             <Card
                 hoverable
                 style={{
-                    width: 600,
                 }}
-                cover={<img alt="example" src={data?.imageUrl} />}
+                cover={<img alt="example" src={data?.imageUrl} width={500} />}
             >
             </Card>
-            <div className='text-xl mx-10'>
+            <div className='text-xl lg:mx-10'>
                 <h1>{data.name}</h1>
                 <p>Category: {data.category}</p>
                 <p>Status: {data.status}</p>
