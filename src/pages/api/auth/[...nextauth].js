@@ -12,7 +12,7 @@ export const authOptions = {
 
     ],
     pages: {
-        signIn: '/login',
+        signIn: 'https://atlas-builder-frontend-a6.vercel.app/login',
     }
 }
 
