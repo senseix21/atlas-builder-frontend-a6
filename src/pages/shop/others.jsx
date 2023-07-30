@@ -5,7 +5,7 @@ import React from 'react';
 const Others = ({ data }) => {
     console.log(data?.length);
     return (
-        <div className='grid grid-cols-3 gap-5'>
+        <div className='grid lg:grid-cols-3 gap-5'>
             {
                 data.map(product =>
                     <Products key={product?._id} data={product}></Products>

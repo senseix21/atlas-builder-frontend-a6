@@ -6,7 +6,7 @@ import React from 'react';
 const Hero = () => {
     return (
         <div className='lg:flex justify-between items-center my-10'>
-            <img className='items-center' src='https://i.ibb.co/sgvJvQp/OIG-removebg-preview.png' width={400} />
+            <img className='items-center' src='https://i.ibb.co/sgvJvQp/OIG-removebg-preview.png' width={350} />
             <div>
                 <h1 className='text-5xl'>Design, Customize, Dominate: <br /> <span className='text-orange-600'> The PC Builder's Haven</span></h1>
                 <p className='text-xl my-5'>
